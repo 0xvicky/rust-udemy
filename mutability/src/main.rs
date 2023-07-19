@@ -27,9 +27,21 @@ fn main() {
     println!("{}", number);
 
     //LOOPS
+    //Variant: 1
     let mut counter = 0;
     while counter < 10 {
         println!("hello,{}", counter);
         counter += 1;
+    }
+
+    //Variant: 2
+    let mut counter = 0;
+    loop {
+        if counter == 4 {
+            break;
+        } else {
+            counter += 1;
+            println!("Counter: {}", counter);
+        }
     }
 }
