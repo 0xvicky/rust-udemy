@@ -1,0 +1,7 @@
+ 1) In rust, there is concept of stack, so main function is one stack and there is separated stack for each function, and the variables of the respective functions are stored in their respective stakcs
+
+ 2) So the last function of the latest function written will be executed first, as Stack follows LIFO, last in first out
+
+ 3) But what if we declare a variable but doesn't allocate any value so that is arbitrary then it cannot be stored in stack because from starting compiler knows how much memory a function going to have so that variable will be stored in special memeory called heap.
+
+
