@@ -5,3 +5,16 @@
  3) But what if we declare a variable but doesn't allocate any value so that is arbitrary then it cannot be stored in stack because from starting compiler knows how much memory a function going to have so that variable will be stored in special memeory called heap.
 
 
+4) Rule of Ownership:
+
+Each value in Rust has a variable that is its "owner."
+There can only be one owner at a time for a given value.
+When the owner goes out of scope, Rust will automatically deallocate the memory associated with that value.
+This rule ensures that there is a clear and predictable ownership pattern for all values, preventing issues like double-free errors or memory leaks.
+
+5) Rule of Borrowing:
+
+In addition to ownership, Rust provides the concept of borrowing, allowing multiple references to access a value without taking ownership.
+Borrowing can be done with either immutable or mutable references (& and &mut, respectively).
+Borrowing is subject to strict rules to prevent data races and ensure memory safety.
+

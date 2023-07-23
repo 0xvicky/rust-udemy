@@ -33,4 +33,5 @@ fn ownership_1(s: &str) -> usize {
 fn change_name(s: &mut String) {
     s.push_str(" Rust");
 }
-//Mutable Borrowing: When mutable reference is passed, so other variable can manipulate the original value
+//Mutable Borrowing: When mutable reference is passed, so other variable can manipulate the original value: &mut a
+//Read-only Borrowing: when only read only permission is given to the variable by giving &a
