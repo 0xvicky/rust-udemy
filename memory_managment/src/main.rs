@@ -2,6 +2,7 @@ fn main() {
     fn1();
     println!("Ownership in rust");
     ownership();
+    slicing();
 }
 
 fn fn1() {
@@ -35,3 +36,22 @@ fn change_name(s: &mut String) {
 }
 //Mutable Borrowing: When mutable reference is passed, so other variable can manipulate the original value: &mut a
 //Read-only Borrowing: when only read only permission is given to the variable by giving &a
+
+fn slicing() {
+    let str_1 = String::from("He  ll");
+    first_word(&str_1);
+}
+
+fn first_word(s: &String) -> usize {
+    let bytes = s.as_bytes();
+
+    for (i, &item) in bytes.iter().enumerate() {
+        if item == b' ' {
+            println!("Space pos:{}", item);
+            return i;
+        }
+        // println!("Item:{}", item);//returning u8
+        // println!("Index:{}", i);//returns index
+    }
+    s.len()
+}
