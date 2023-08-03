@@ -3,9 +3,9 @@ fn main() {
     str1();
     str2();
     str3();
-    // str4();
-    // str5();
-    // str6();
+    str4();
+    str5();
+    str6();
 }
 
 fn str1() {
@@ -44,5 +44,21 @@ fn str4() {
 }
 
 fn str5() {
-    // We can use String::from or to_string to convert a &str to String
+    let s1 = String::from("hi,中国");
+    let h = &s1[0..1]; // Modify this line to fix the error, tips: `h` only takes 1 byte in UTF8 format
+    assert_eq!(h, "h");
+
+    let h1 = &s1[3..6]; // Modify this line to fix the error, tips: `中`  takes 3 bytes in UTF8 format
+    assert_eq!(h1, "中");
+    println!("{}", h1);
+    println!("Success!");
+}
+
+fn str6() {
+    //Iterating over the string
+    // Fill the blank to print each char in "你好，世界"
+    for c in "你好，世界".chars() {
+        // Instead of iter() method we use chars() method
+        println!("{}", c)
+    }
 }

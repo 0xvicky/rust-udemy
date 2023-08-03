@@ -1,1 +1,1 @@
-E:\Code\Rust\Rust\ Udemy\rust_by_practise\strings\target\debug\strings.exe: E:\Code\Rust\Rust\ Udemy\rust_by_practise\strings\src\main.rs
+E:\Code\Rust\Rust\ Udemy\rust_by_Practise\strings\target\debug\strings.exe: E:\Code\Rust\Rust\ Udemy\rust_by_Practise\strings\src\main.rs
