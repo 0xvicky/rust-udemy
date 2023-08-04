@@ -4,6 +4,7 @@ fn main() {
     fn1();
     fn2();
     fn3();
+    fn4();
 }
 
 fn fn1() {
@@ -32,5 +33,15 @@ fn fn3() {
     // Fill the blank to make the code work, DON'T USE 0..2 again
     let slice2 = [..2]; //We can use this [..2] instead of [0..2]
     assert_eq!(slice1, slice2);
+    println!("Success!");
+}
+
+fn fn4() {
+    let s = "你好，世界";
+    // Modify this line to make the code work
+    let slice = &s[0..3]; //This one character takes 3 bytes, so we can't use [0..1]
+
+    assert!(slice == "你");
+
     println!("Success!");
 }
