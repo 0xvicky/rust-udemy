@@ -3,6 +3,7 @@ fn main() {
     fn1();
     fn2();
     fn3();
+    fn4();
 }
 
 fn fn1() {
@@ -29,7 +30,17 @@ fn fn3() {
     // Arrays are stack allocated, `std::mem::size_of_val` returns the bytes which an array occupies
     // A char takes 4 bytes in Rust: Unicode char
     assert!(std::mem::size_of_val(&arr) == 12); //this method prints the space array is taking
-    println!("{}", std::mem::size_of_val(&arr0));
+    println!("{}", std::mem::size_of_val(&arr0)); //12
+
+    println!("Success!");
+}
+
+fn fn4() {
+    // Fill the blank with proper array type
+    let arr: [usize; 5] = [1, 2, 3, 4, 5];
+
+    // Modify the code below to make it work
+    assert!(arr.len() == 5);
 
     println!("Success!");
 }
