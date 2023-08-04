@@ -44,3 +44,14 @@ fn fn4() {
 
     println!("Success!");
 }
+
+fn fn5() {
+    // Fill the blank
+    //shorthand to write 1 one hundred times
+    let list: [i32; 100] = [1; 100]; //[1,1,1,1,1,1,1.........100times]
+
+    assert!(list[0] == 1);
+    assert!(list.len() == 100);
+
+    println!("Success!");
+}
